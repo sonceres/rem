@@ -12,15 +12,15 @@
   </head>
 
 
-  <body style="background-color: #ffccdb;">
+  <body >
 
 
-<div style="background-color: #fc92a8;" > 
+<div style="background-color: #ff4f00; height: 50px; opacity: 90%;" > 
   <% if user_signed_in? %>
 Hello  <%=current_user.email%>
 
 <%= link_to('Выйти', destroy_user_session_path, :method => :delete) %> 
- "Электронные сигареты из китая"
+ 
 
 
   </li>
@@ -28,6 +28,7 @@ Hello  <%=current_user.email%>
   <li>
   <%= link_to('Вход    ', new_user_session_path)%>  
   <%= link_to('Регистрация', new_user_registration_path)%>
+  "Электронные сигареты из китая"
 <% end %>
 </div>
 
@@ -37,5 +38,12 @@ Hello  <%=current_user.email%>
 
 
     <%= yield %>
+
+    <div style="background-color: #ff4f00; height: 50px; position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80px;" > 
+    </div>
   </body>
 </html>
